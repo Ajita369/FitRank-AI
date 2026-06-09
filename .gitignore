@@ -35,6 +35,7 @@ htmlcov/
 # Data artifacts
 data/
 docs/
+artifacts/*.npy
 
 # IDE/editor
 .vscode/
