@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  fitrank:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: fitrank_ai_container
+    volumes:
+      # Mount local data directory to container data directory (useful if candidates.jsonl is large and updated)
+      - ./data:/app/data
+      # Mount output folder to retrieve the final submission.csv on the host
+      - ./output:/app/output
+    command: python rank.py --candidates data/candidates.jsonl --out output/submission.csv

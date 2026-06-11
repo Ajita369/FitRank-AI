@@ -1,0 +1,6 @@
+numpy>=1.22.0
+sentence-transformers>=2.2.0
+scikit-learn>=1.0.0
+python-docx>=0.8.11
+tqdm>=4.64.0
+pytest>=7.0.0
