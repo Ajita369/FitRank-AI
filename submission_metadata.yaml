@@ -1,0 +1,72 @@
+# Redrob Hackathon — Submission Metadata Template
+#
+# Copied to repo root as `submission_metadata.yaml`.
+# The fields here match the portal submission data.
+
+# ============================================================================
+# Team identity
+# ============================================================================
+team_name: "FitRank AI Team"  # Used in leaderboard and announcements
+
+primary_contact:
+  name: "Ajita"
+  email: "ajita@example.com"      # Used for organizer communication
+  phone: "+91-XXXXXXXXXX"         # Used for outreach
+
+team_members:
+  - name: "Ajita"
+    email: "ajita@example.com"
+    role: "ML Engineer"           # Solo participant
+
+# ============================================================================
+# Code and reproducibility
+# ============================================================================
+github_repo: "https://github.com/Ajita369/FitRank-AI"
+# Required. Must be reachable. Grant access at Stage 3.
+
+sandbox_link: "Docker Container (Volume Mapped Sandbox)"
+# Using Docker sandbox for local replication verification.
+
+reproduce_command: "python rank.py --candidates data/candidates.jsonl --out output/submission.csv"
+# Single command that produces submission.csv from candidates.jsonl.
+# Completes in ~70 seconds on CPU.
+
+# ============================================================================
+# Compute environment
+# ============================================================================
+compute:
+  platform: "Local Intel/AMD CPU Machine"
+  cpu_cores: 8                                  # Number of CPU cores used
+  ram_gb: 16                                    # Available RAM in GB
+  python_version: "3.10.x"                      # python --version
+  os: "Windows / Linux (Docker)"                # OS used
+  uses_gpu_for_inference: false                 # Must be false — CPU-only constraint
+  has_network_during_ranking: false             # Must be false — zero network dependencies
+  pre_computation_required: true                # Pre-computes Sentence-Transformers embeddings offline
+  pre_computation_time_minutes: 35              # One-time pre-computation
+
+# ============================================================================
+# AI tools declaration
+# ============================================================================
+ai_tools_used:
+  - "Gemini"
+  - "Antigravity"
+
+ai_usage_summary: |
+  Used the Antigravity pair programming coding agent (powered by Google DeepMind's Gemini) for system architectural design, multi-lens pipeline implementation, and automated reasoning audits. No candidate data was sent to cloud APIs during runtime execution.
+
+# ============================================================================
+# Approach summary
+# ============================================================================
+methodology_summary: |
+  FitRank AI implements the Recruiter Cognitive Model (RCM), evaluating candidates across 6 independent parallel lenses: Role Semantic Fit, Skill Depth & Breadth, Seniority Match, Behavioral Hirability, Red Flag Detector, and Evidence Strength. A multiplicative gate multiplier on Lens 5 (Red Flag Detector) filters out impossible date-duration or skills anomalies, guaranteeing a 0% honeypot rate in the top-100 shortlist. An endorsements-and-duration credibility multiplier on Lens 2 prevents keyword stuffing. The final shortlist is sorted by score descending, with candidate_id ascending for ties. Output includes natural, compositional, fact-grounded reasonings under a 250-character limit.
+
+# ============================================================================
+# Declarations
+# ============================================================================
+declarations:
+  read_submission_spec: true        # I have read submission_spec.md in full
+  code_is_original_work: true       # My code is my team's original work
+  no_collusion: true                # I have not coordinated my submission with other teams
+  honeypot_check_done: true         # Checked for honeypots (0% leakage in top-100)
+  reproduction_tested: true         # Tested reproduction command locally and in Docker

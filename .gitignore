@@ -44,5 +44,3 @@ artifacts/*.npy
 # OS files
 .DS_Store
 Thumbs.db
-
-submission.csv
