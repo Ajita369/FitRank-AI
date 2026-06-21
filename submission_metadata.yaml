@@ -1,22 +1,18 @@
-# Redrob Hackathon — Submission Metadata Template
-#
-# Copied to repo root as `submission_metadata.yaml`.
-# The fields here match the portal submission data.
 
 # ============================================================================
 # Team identity
 # ============================================================================
-team_name: "FitRank AI Team"  # Used in leaderboard and announcements
+team_name: "Ajita"  # Used in leaderboard and announcements
 
 primary_contact:
-  name: "Ajita"
-  email: "ajita@example.com"      # Used for organizer communication
-  phone: "+91-XXXXXXXXXX"         # Used for outreach
+  name: "Ajita Gupta"
+  email: "ajitagupta369@gmail.com"      # Used for organizer communication
+  phone: "+91-9993157808"         # Used for outreach
 
 team_members:
-  - name: "Ajita"
-    email: "ajita@example.com"
-    role: "ML Engineer"           # Solo participant
+  - name: "Ajita Gupta"
+    email: "ajitagupta369@gmail.com"
+    role: "Full-Stack AI Engineer"           # Solo participant
 
 # ============================================================================
 # Code and reproducibility
@@ -50,10 +46,11 @@ compute:
 # ============================================================================
 ai_tools_used:
   - "Gemini"
+  - "GitHub Copilot"
   - "Antigravity"
 
 ai_usage_summary: |
-  Used the Antigravity pair programming coding agent (powered by Google DeepMind's Gemini) for system architectural design, multi-lens pipeline implementation, and automated reasoning audits. No candidate data was sent to cloud APIs during runtime execution.
+  Used the Antigravity and GitHub Copilot pair programming coding agent (powered by Google DeepMind's Gemini) for system architectural design, multi-lens pipeline implementation, and automated reasoning audits. No candidate data was sent to cloud APIs during runtime execution.
 
 # ============================================================================
 # Approach summary
